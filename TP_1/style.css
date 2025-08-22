@@ -61,6 +61,7 @@ form{
     display: block;
     text-align: center;
     margin: 20px 35%;
+    padding-bottom: 25px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
 }
@@ -74,7 +75,7 @@ label {
 input {
     display: block;
     margin: 10px auto 10px auto;
-    padding: 5px;
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
 }
