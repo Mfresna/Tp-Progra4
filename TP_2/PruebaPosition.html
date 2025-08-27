@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo Position en CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 2000px; /* para hacer scroll */
+    }
+
+    .box {
+      width: 150px;
+      height: 80px;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      line-height: 80px;
+      border-radius: 8px;
+      margin: 20px;
+    }
+
+    /* static */
+    .static {
+      background: gray;
+      position: static; /* por defecto */
+    }
+
+    /* relative */
+    .relative {
+      background: blue;
+      position: relative;
+      top: 20px;  /* baja 20px desde su posición original */
+      left: 40px; /* se corre 40px a la derecha */
+    }
+
+    /* absolute */
+    .absolute {
+      background: green;
+      position: absolute;
+      top: 200px;  /* respecto al body (porque no hay padre posicionado) */
+      left: 200px;
+    }
+
+    /* fixed */
+    .fixed {
+      background: red;
+      position: fixed;
+      bottom: 20px;
+      right: 20px; /* siempre abajo a la derecha de la pantalla */
+    }
+
+    /* sticky */
+    .sticky {
+      background: orange;
+      position: sticky;
+      top: 0; /* cuando llega al top, se queda pegado */
+    }
+
+    .content {
+      height: 1200px;
+      background: linear-gradient(white, lightgray);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box static">STATIC</div>
+  <div class="box relative">RELATIVE</div>
+  <div class="box absolute">ABSOLUTE</div>
+  <div class="box sticky">STICKY (scroll)</div>
+
+  <div class="content">
+    <p>Hacé scroll para ver cómo funciona <b>sticky</b> y <b>fixed</b>.</p>
+  </div>
+
+  <div class="box fixed">FIXED</div>
+
+</body>
+</html>
