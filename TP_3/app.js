@@ -92,3 +92,50 @@ console.log(numeros.sort((a,b)=> a-b));
 
   //Descendente
 console.log(numeros.sort((a,b)=> b-a));
+
+/// EJERCICIO 9
+console.log('\n EJERCICIO 9');
+
+let tienda = {
+  productos: [
+    { id: 1, nombre: "Laptop", precio: 1200, stock: 10 },
+    { id: 2, nombre: "Mouse", precio: 25, stock: 50 },
+    { id: 3, nombre: "Teclado", precio: 45, stock: 30 },
+    { id: 4, nombre: "Monitor", precio: 300, stock: 15 },
+    { id: 5, nombre: "Auriculares", precio: 80, stock: 20 }
+  ],
+  vender: function(idProducto,cantidad){
+    let pBuscado = this.productos.find(p => p.nombre === idProducto);
+
+    if(!pBuscado){
+      console.log('Producto no Encontrado');
+    }else if(pBuscado.stock >= cantidad){
+      pBuscado.stock -= cantidad;
+      console.log('Producto vendido Exitosamente');
+    }else{
+      console.log('Stock Insuficiente');
+    }
+  }
+};
+
+tienda.vender("Producto1", 5);
+tienda.vender("Laptop", 5);
+tienda.vender("Laptop", 10);
+
+/// EJERCICIO 10
+console.log('\n EJERCICIO 10');
+
+let carrito = [];
+
+carrito.push({id:1,nombre:"yerba",precio: 500, cantidad: 5});
+carrito.push({id:1,nombre:"azucar",precio: 100, cantidad: 10});
+carrito.push({id:1,nombre:"bombilla",precio: 600, cantidad: 1});
+carrito.push({id:1,nombre:"Don Satur",precio: 1200, cantidad: 50});
+carrito.push({id:1,nombre:"Agua Caliente",precio: 800, cantidad: 2});
+
+console.log('Costo Total del Carrito: $' + carrito.reduce(function(a,producto){
+  return a + (producto.precio * producto.cantidad);
+},0));
+
+
+
