@@ -66,3 +66,29 @@ let clientes = [
 clientes.forEach(function(cliente){
     console.log('Cliente: ' + cliente.nombre + ' - Cantidad de Compras: ' + cliente.compras.length);
 })
+
+/// EJERCICIO 7
+console.log('\n EJERCICIO 7');
+
+function procesarClientes(clientes,callback){
+  callback(clientes)
+}
+  //Nombre de los Clientes
+procesarClientes(clientes,cliente => {
+  console.log('Nombre de los Clientes: '+ cliente.map(c => c.nombre));
+});
+  //Cantidad de Compras
+procesarClientes(clientes,cliente => {
+  console.log('Total de Compras: ' + cliente.reduce(function(a,c) {return a+c.compras.length},0))
+});
+
+/// EJERCICIO 8
+console.log('\n EJERCICIO 8');
+
+const numeros = [1,5,3,2,6,1,4,9,8,7,7]
+
+  //Ascendente
+console.log(numeros.sort((a,b)=> a-b));
+
+  //Descendente
+console.log(numeros.sort((a,b)=> b-a));
