@@ -133,9 +133,95 @@ carrito.push({id:1,nombre:"bombilla",precio: 600, cantidad: 1});
 carrito.push({id:1,nombre:"Don Satur",precio: 1200, cantidad: 50});
 carrito.push({id:1,nombre:"Agua Caliente",precio: 800, cantidad: 2});
 
+console.log(carrito.map(function(p){
+  return {nombre: p.nombre, cantidad: p.cantidad, subtotal: p.cantidad*p.precio}
+}));
+
 console.log('Costo Total del Carrito: $' + carrito.reduce(function(a,producto){
   return a + (producto.precio * producto.cantidad);
 },0));
 
+/// EJERCICIO 11
+console.log('\n EJERCICIO 11');
 
+const libros = [
+  {id: 1,titulo: "Automatización en entornos reales",autor: "Matías García",genero: "Tecnología",disponible: true},
+  {id: 2,titulo: "CSS Grid y Flexbox en acción",autor: "Laura Méndez",genero: "Desarrollo Web",disponible: false},
+  {id: 3,titulo: "Consultas SQL para arquitectos de datos",autor: "Carlos Ruiz",genero: "Bases de Datos",disponible: true},
+  {id: 4,titulo: "Scraping ético y legal",autor: "Ana Torres",genero: "Informática Legal",disponible: true},
+  {id: 5,titulo: "Accesibilidad y semántica HTML",autor: "Federico López",genero: "Desarrollo Web",disponible: false}
+];
+
+console.log(libros.filter(l => l.genero === "Desarrollo Web"));
+
+console.log('Libros en Mayuscula:');
+console.log(libros.map(l => l.titulo.toUpperCase()));
+
+function prestarLibro(id){
+  let libro = libros.find(l => l.id === id);
+
+  if(libro.disponible){
+    console.log('\nLibro Alquilado con Exito!');
+    libro.disponible = false;
+    console.log('El libro ahora queda: ', libro);
+  }else{
+    console.log('El Libro no se encuentra disponible');
+  }
+}
+
+prestarLibro(1);
+
+
+/// EJERCICIO 12
+console.log('\n EJERCICIO 12');
+
+let agenda = {
+  contactos: [],
+  agregarContacto(contacto) {
+    this.contactos.push(contacto);
+  },
+  eliminarContacto(id){
+    console.log('Contactos Borrados: ', this.contactos.filter(c => c.id === id));
+    this.contactos = this.contactos.filter(c => c.id !== id);
+  },
+  buscarContacto(nombre){
+    console.log('Contactos con el nombre: ' + nombre + '\n', this.contactos.find(c => c.nombre.toUpperCase() === nombre.toUpperCase()));
+  },
+  listarContactos(){
+    console.log('Todos los contactos: ', this.contactos);
+  }
+}
+
+
+agenda.agregarContacto({ id: 1, nombre: 'Matías García', telefono: '223-555-1234' });
+agenda.agregarContacto({ id: 2, nombre: 'Laura Méndez', telefono: '223-555-5678' });
+agenda.agregarContacto({ id: 3, nombre: 'Carlos Ruiz', telefono: '223-555-9999' });
+agenda.agregarContacto({ id: 1, nombre: 'Matías García', telefono: '223-555-0000' }); // repetido
+
+agenda.listarContactos();
+agenda.buscarContacto('laura méndez');
+agenda.eliminarContacto(1);
+agenda.listarContactos();
+
+
+/// EJERCICIO 13
+console.log('\n EJERCICIO 13');
+
+  //Se utiliza el arreglo productos del principio
+function comprar(id, cantidad, callbackExito, callbackError){
+  let producto = productos.find(p => p.id === id);
+  if(!producto){
+    //No se encontro
+    callbackError('Producto No Encontrado');
+  }else if(producto.stock < cantidad){
+    //No hay Stock
+    callbackError('No hay Stock del Producto');
+  }else{
+    producto.stock -= cantidad;
+    callbackExito('Compra Exitosa!');
+  }
+}
+
+comprar(1,1,m => console.log('GENIAL! ' + m),m => console.log('ERROR! ' + m));
+console.log('\nSTOCK ACTUAL: ', productos);
 
