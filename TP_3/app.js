@@ -207,6 +207,30 @@ agenda.listarContactos();
 /// EJERCICIO 13
 console.log('\n EJERCICIO 13');
 
+let alumnos = [
+  { id: 1, nombre: "Ana", notas: [8, 9, 10, 5] },
+  { id: 2, nombre: "Luis", notas: [6, 7, 5, 4] },
+  { id: 3, nombre: "María", notas: [9, 8, 9] },
+  { id: 4, nombre: "Carlos", notas: [4, 6] }
+];
+
+let alumnosPromedio = alumnos.map(a => {
+  return {
+    id: a.id,
+    nombre: a.nombre,
+    promedio: a.notas.reduce(((acum,nota) => acum+nota),0)/a.notas.length
+  };
+});
+
+console.log('El promedio de las notas es: ', alumnosPromedio);
+
+let aprobados = alumnosPromedio.filter(ap => ap.promedio >= 6);
+console.log('Los alumnos aprobados son: ', aprobados);
+
+
+/// EJERCICIO 14
+console.log('\n EJERCICIO 14');
+
   //Se utiliza el arreglo productos del principio
 function comprar(id, cantidad, callbackExito, callbackError){
   let producto = productos.find(p => p.id === id);
@@ -218,10 +242,55 @@ function comprar(id, cantidad, callbackExito, callbackError){
     callbackError('No hay Stock del Producto');
   }else{
     producto.stock -= cantidad;
-    callbackExito('Compra Exitosa!');
+    callbackExito('Compra Exitosa!\n' + producto.id +' '+ producto.nombre + ' - cantidad: '+ cantidad + ' - total: $' + (producto.precio * cantidad));
   }
 }
 
 comprar(1,1,m => console.log('GENIAL! ' + m),m => console.log('ERROR! ' + m));
 console.log('\nSTOCK ACTUAL: ', productos);
 
+
+/// EJERCICIO 15
+console.log('\n EJERCICIO 15');
+
+function aplicarDescuento(id, descuento, callbackExito, callbackError){
+  let producto = productos.find(p => p.id === id);
+  if(!producto){
+    //No se encontro
+    callbackError('Producto No Encontrado');
+  }else if(descuento <= 0 || descuento > 100){
+    //Descuento Invalido
+    callbackError('Descuento invalido');
+  }else{
+    let precioDescuento = producto.precio * (1-descuento/100);
+    callbackExito(producto,precioDescuento);
+  }
+}
+
+aplicarDescuento(1,10,(p,pd) =>{
+  console.log('Producto: ', p.nombre, ' Su precio es: $', pd);
+}, m => console.log(m));
+
+aplicarDescuento(1,10,(p,pd) => {
+  comprar(p.id,1,m => console.log('GENIAL! ' + m),m => console.log('ERROR! ' + m));
+},m => console.log('ERROR! ' + m));
+
+console.log('\nSTOCK ACTUAL: ', productos);
+
+
+/// EJERCICIO 16
+console.log('\n EJERCICIO 16');
+
+function filtrarPorStock(minStock, callbackExito,callbackError){
+  
+  if(productos.filter(p => p.stock >= minStock).length){
+    callbackExito(productos.filter(p => p.stock >= minStock))
+  }else{
+    callbackError('No hay productos con Stock Suficiente')
+  }
+}
+
+filtrarPorStock(10,
+  m => {console.log('Los productos con stock suficiente son: ', m);},
+  m => console.log(m)
+);
