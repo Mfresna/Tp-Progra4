@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de display en CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 40px;
+    }
+
+    .contenedor {
+      border: 2px dashed gray;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .caja {
+      background: steelblue;
+      color: white;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 6px;
+    }
+
+    /* 1. BLOCK */
+    .block .caja {
+      display: block;
+      width: 150px;
+    }
+
+    /* 2. INLINE */
+    .inline .caja {
+      display: inline;
+      width: 150px; /* NO se respeta en inline */
+    }
+
+    /* 3. INLINE-BLOCK */
+    .inline-block .caja {
+      display: inline-block;
+      width: 150px;
+    }
+
+    /* 4. NONE */
+    .none .caja {
+      display: none; /* Desaparece */
+    }
+
+    /* 5. FLEX */
+    .flex {
+      display: flex;
+      gap: 10px;
+      justify-content: space-around;
+    }
+
+    /* 6. GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    /* 7. INLINE-FLEX */
+    .inline-flex {
+      display: inline-flex;
+      gap: 10px;
+      border: 2px solid red;
+    }
+
+    /* 8. TABLE */
+    .table {
+      display: table;
+      border-collapse: collapse;
+    }
+
+    .table .caja {
+      display: table-cell;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplo de display en CSS</h1>
+
+  <h2>1. Block</h2>
+  <div class="contenedor block">
+    <div class="caja">Caja 1</div>
+    <div class="caja">Caja 2</div>
+    <div class="caja">Caja 3</div>
+  </div>
+
+  <h2>2. Inline</h2>
+  <div class="contenedor inline">
+    <div class="caja">Caja 1</div>
+    <div class="caja">Caja 2</div>
+    <div class="caja">Caja 3</div>
+  </div>
+
+  <h2>3. Inline-block</h2>
+  <div class="contenedor inline-block">
+    <div class="caja">Caja 1</div>
+    <div class="caja">Caja 2</div>
+    <div class="caja">Caja 3</div>
+  </div>
+
+  <h2>4. None</h2>
+  <div class="contenedor none">
+    <div class="caja">Caja 1</div>
+    <div class="caja">Caja 2</div>
+    <div class="caja">Caja 3</div>
+  </div>
+  <p>👉 En este ejemplo no ves nada porque las cajas tienen <code>display: none;</code></p>
+
+  <h2>5. Flex</h2>
+  <div class="contenedor flex">
+    <div class="caja">Caja 1</div>
+    <div class="caja">Caja 2</div>
+    <div class="caja">Caja 3</div>
+  </div>
+
+  <h2>6. Grid</h2>
+  <div class="contenedor grid">
+    <div class="caja">Caja 1</div>
+    <div class="caja">Caja 2</div>
+    <div class="caja">Caja 3</div>
+  </div>
+
+  <h2>7. Inline-flex</h2>
+  <div class="inline-flex">
+    <div class="caja">Caja 1</div>
+    <div class="caja">Caja 2</div>
+    <div class="caja">Caja 3</div>
+  </div>
+  <p>👉 Como es <code>inline-flex</code>, se comporta como un elemento en línea, fíjate que no ocupa todo el ancho y el borde rojo lo encierra justo.</p>
+
+  <h2>8. Table</h2>
+  <div class="contenedor table">
+    <div class="caja">Celda 1</div>
+    <div class="caja">Celda 2</div>
+    <div class="caja">Celda 3</div>
+  </div>
+</body>
+</html>

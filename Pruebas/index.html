@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de position en CSS</title>
+  <style>
+    body {
+      height: 2000px; /* Para que haya scroll */
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .caja {
+      width: 150px;
+      height: 80px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border-radius: 8px;
+      margin: 10px;
+    }
+
+    .static {
+      background: gray;
+      position: static;
+      top:500px;
+    }
+
+    .relative {
+      background: blue;
+      position: relative;
+      top:0px;
+      left: 30px;
+    }
+
+    .contenedor {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background: lightyellow;
+      border: 2px dashed orange;
+      margin: 20px;
+    }
+
+    .absolute {
+      background: green;
+      position: absolute;
+      top: 1px;
+      right: 5px;
+    }
+
+    .fixed {
+      background: red;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .sticky {
+      background: purple;
+      position: sticky;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="caja static">Static</div>
+
+  <div class="caja relative">Relative</div>
+
+  <div class="contenedor">
+    Contenedor relativo
+    <div class="caja absolute">Absolute</div>
+  </div>
+
+  <div class="caja sticky">Sticky</div>
+
+  <div class="caja fixed">Fixed</div>
+</body>
+</html>
