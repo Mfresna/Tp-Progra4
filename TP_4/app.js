@@ -72,4 +72,9 @@ document.getElementById("enviar").addEventListener("click",(e)=>{
 
 })
 
+document.getElementById("magia").addEventListener("click", () =>{
+    document.querySelector("body").classList.toggle("animacion");
+})
+
+
 
