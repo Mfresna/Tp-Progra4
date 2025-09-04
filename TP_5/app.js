@@ -12,5 +12,5 @@ let promesa = new Promise((resolve, reject)=>{
 });
 
 promesa
-    .then(1)
+    .then((mensaje) => {console.log(mensaje);})
     .catch((mensaje) => {console.log("ERROR: " + mensaje);})
