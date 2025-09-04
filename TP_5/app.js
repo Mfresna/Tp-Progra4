@@ -35,5 +35,7 @@ parImpar(5)
     .catch((msj) => console.log(msj))
 
     //EJERCICIO 3
-
-let promesa = new Promise((resolve,reject))
+let promesa = new Promise((resolve) =>{
+    //Solo va a ser exitosa por eso no le paso un reject
+    resolve()
+})
