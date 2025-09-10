@@ -1,0 +1,91 @@
+:root {
+  --colorFondoPrincipal: #001F2F;
+  --colorFondoSecundario: rgba(0, 128, 128, 0.7);
+  --colorPrincipal: #00BFA6;
+  --fuenteBase: "Segoe UI", Roboto, sans-serif;
+  --colorTexto: #E0F7FA;
+  --sombra: rgba(0, 128, 128, 0.3);
+}
+
+* {
+    font-family: var(--fuenteBase);
+    color: var(--colorTexto);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background: var(--colorFondoPrincipal);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#formulario {
+    background-color: var(--colorFondoSecundario);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px 40px;
+    border: 1px solid var(--sombra);
+    box-shadow: 0 4px 15px var(--sombra);
+}
+
+.form-group > * {
+    margin-top: 5%;
+    display: block;
+    min-width: 200px;
+}
+
+.form-group > label {
+    margin: 5px 0 10px 0;
+    font-weight: bolder;
+}
+
+.form-group > input {
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid var(--sombra);
+    height: 30px;
+    padding: 5px;   
+    background-color: rgba(0,0,0,0.05);
+    color: var(--colorTexto);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#botones > button {
+    background-color: var(--colorPrincipal);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transition: background-color 0.25s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 2px 10px rgba(0,191,166,0.3);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+#botones > button:hover {
+    background-color: #00A28F;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,191,166,0.4);
+}
+
+ebutton:hover {
+    background-color: #2563EB;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+}

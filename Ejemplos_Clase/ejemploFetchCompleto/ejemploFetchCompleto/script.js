@@ -1,83 +1,83 @@
 // // Ejemplo 1
-// const url = "https://jsonplaceholder.typicode.com/posts";
+const url = "https://jsonplaceholder.typicode.com/posts";
 
-//   //  GET - Obtener un post
-//     async function getPost() {
-//       try {
-//         let respuesta = await fetch(url + "/1");
-//         let data = await respuesta.json();
-//         document.getElementById("resultado").textContent = JSON.stringify(data, null, 2);
-//       } catch (error) {
-//         document.getElementById("resultado").textContent = "Error: " + error;
-//       }
-//     }
+  //  GET - Obtener un post
+    async function getPost() {
+      try {
+        let respuesta = await fetch(url + "/1");
+        let data = await respuesta.json();
+        document.getElementById("resultado").textContent = JSON.stringify(data, null, 2);
+      } catch (error) {
+        document.getElementById("resultado").textContent = "Error: " + error;
+      }
+    }
 
-//     // POST - Crear un nuevo post
-//     async function crearPost() {
-//       let nuevoPost = {
-//         title: "Título nuevo",
-//         body: "Contenido del nuevo post",
-//         userId: 1
-//       };
+    // POST - Crear un nuevo post
+    async function crearPost() {
+      let nuevoPost = {
+        title: "Título nuevo",
+        body: "Contenido del nuevo post",
+        userId: 1
+      };
 
-//       try {
-//         let respuesta = await fetch(url, {
-//           method: "POST",
-//           headers: { //Los headers (cabeceras HTTP) son información adicional que se manda con la petición
-//             "Content-Type": "application/json" //esto le avisa al servidor "esta en formato json"
-//           },
-//           body: JSON.stringify(nuevoPost)
-//         });
+      try {
+        let respuesta = await fetch(url, {
+          method: "POST",
+          headers: { //Los headers (cabeceras HTTP) son información adicional que se manda con la petición
+            "Content-Type": "application/json" //esto le avisa al servidor "esta en formato json"
+          },
+          body: JSON.stringify(nuevoPost)
+        });
 
-//         let data = await respuesta.json();
-//         document.getElementById("resultado").textContent = "POST creado:\n" + JSON.stringify(data, null, 2);
-//       } catch (error) {
-//         document.getElementById("resultado").textContent = "Error: " + error;
-//       }
-//     }
+        let data = await respuesta.json();
+        document.getElementById("resultado").textContent = "POST creado:\n" + JSON.stringify(data, null, 2);
+      } catch (error) {
+        document.getElementById("resultado").textContent = "Error: " + error;
+      }
+    }
 
-//     // PUT - Actualizar un post existente
-//     async function actualizarPost() {
-//       const postActualizado = {
-//         id: 1,
-//         title: "Título actualizado",
-//         body: "Este es el nuevo contenido del post",
-//         userId: 1
-//       };
+    // PUT - Actualizar un post existente
+    async function actualizarPost() {
+      const postActualizado = {
+        id: 1,
+        title: "Título actualizado",
+        body: "Este es el nuevo contenido del post",
+        userId: 1
+      };
 
-//       try {
-//         let respuesta = await fetch(url + "/1", {
-//           method: "PUT",
-//           headers: {
-//             "Content-Type": "application/json"
-//           },
-//           body: JSON.stringify(postActualizado)
-//         });
+      try {
+        let respuesta = await fetch(url + "/1", {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(postActualizado)
+        });
 
-//         let data = await respuesta.json();
+        let data = await respuesta.json();
 
-//         document.getElementById("resultado").textContent = "POST actualizado:\n" + JSON.stringify(data, null, 2);
-//       } catch (error) {
-//         document.getElementById("resultado").textContent = "Error: " + error;
-//       }
-//     }
+        document.getElementById("resultado").textContent = "POST actualizado:\n" + JSON.stringify(data, null, 2);
+      } catch (error) {
+        document.getElementById("resultado").textContent = "Error: " + error;
+      }
+    }
 
-//     // DELETE - Eliminar un post
-//     async function borrarPost() {
-//       try {
-//         let respuesta = await fetch(url + "/1", {
-//           method: "DELETE"
-//         });
+    // DELETE - Eliminar un post
+    async function borrarPost() {
+      try {
+        let respuesta = await fetch(url + "/1", {
+          method: "DELETE"
+        });
 
-//         if (respuesta.ok) {
-//           document.getElementById("resultado").textContent = "Post eliminado correctamente.";
-//         } else {
-//           document.getElementById("resultado").textContent = "Error al eliminar.";
-//         }
-//       } catch (error) {
-//         document.getElementById("resultado").textContent = "Error: " + error;
-//       }
-//     }
+        if (respuesta.ok) {
+          document.getElementById("resultado").textContent = "Post eliminado correctamente.";
+        } else {
+          document.getElementById("resultado").textContent = "Error al eliminar.";
+        }
+      } catch (error) {
+        document.getElementById("resultado").textContent = "Error: " + error;
+      }
+    }
 
 
 
