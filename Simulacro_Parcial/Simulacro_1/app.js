@@ -24,6 +24,8 @@ async function cargarJSON() {
 
     totalRegistros = objJSON.length;
 
+    respuestabox.innerHTML="";
+
     objJSON.forEach(obj => {
         let tarjeta = document.createElement("li");
         let botonera = document.createElement("div");
@@ -52,7 +54,7 @@ async function cargarJSON() {
             //ELIMINAR
         btnEliminar.classList.add("eliminar");
         btnEliminar.textContent = "Eliminar";
-        btnModificar.type = "button";
+        btnEliminar.type = "button";
         btnEliminar.addEventListener("click",()=>{
             event.preventDefault();
             eliminar(obj.id);
@@ -82,14 +84,15 @@ async function agregar() {
   event.preventDefault(); 
     
   let nuevoObj = {
-    id:(totalRegistros + 1).toString(),
+    id: (idInput.value).toString(),
     nombre: nombreInput.value,
     planeta: planetaInput.value,
-    nivelPoder: nivelInput.value
+    nivelPoder: Number(nivelInput.value)
   };
 
   try {
-    if(idInput.value !== "" || nivelInput.value < 0 || nivelInput.value > 100 ){
+
+    if(!nombreInput.checkValidity() || !planetaInput.checkValidity() || !nivelInput.checkValidity()){
         alert("No se puede ejecutar");
         throw new Error("No se pudo Agregar");
     }
@@ -111,9 +114,45 @@ async function agregar() {
   }
 }
 
+async function modificar() {
+    event.preventDefault();
 
-btnAgregar.addEventListener("click",()=>{
-    agregar();
-})
+    let actualizarObj = {
+      id: idInput.value,
+      nombre: nombreInput.value,
+      planeta: planetaInput.value,
+      nivelPoder: Number(nivelInput.value)
+    };  
+
+    console.log(actualizarObj)
+
+    try {
+      if(!nombreInput.checkValidity() || !planetaInput.checkValidity() || !nivelInput.checkValidity()){
+          alert("No se puede ejecutar");
+          throw new Error("No se pudo Modificar");
+      }
+
+      let actualizado = await fetch(`${URL}/${idInput.value}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(actualizarObj)
+      });
+
+      idInput.value = "";
+      nombreInput.value = "";
+      planetaInput.value = "";
+      nivelInput.value = "";
+
+      alert(actualizado);
+
+      await cargarJSON();
+
+    } catch (error) {
+      console.error("Error al agregar nuevo:", error);
+    }
+}
+
+btnModificar.addEventListener("click", modificar);
+btnAgregar.addEventListener("click",agregar);
 
 cargarJSON();

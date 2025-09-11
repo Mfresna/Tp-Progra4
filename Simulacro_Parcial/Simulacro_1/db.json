@@ -2,7 +2,7 @@
   "extraterrestres": [
     {
       "id": "1",
-      "nombre": "Zorglum",
+      "nombre": "Zorglum6",
       "planeta": "Nebulon-5",
       "nivelPoder": 87
     },
@@ -25,46 +25,40 @@
       "nivelPoder": 100
     },
     {
-      "id": 5,
-      "nombre": "Matias",
-      "planeta": "pp",
-      "nivelPoder": "50"
-    },
-    {
-      "id": 6,
-      "nombre": "Matias",
-      "planeta": "pp",
-      "nivelPoder": "50"
-    },
-    {
-      "id": 7,
-      "nombre": "Matias",
-      "planeta": "pp",
-      "nivelPoder": "50"
-    },
-    {
-      "id": 8,
-      "nombre": "Matias",
-      "planeta": "pp",
-      "nivelPoder": "50"
-    },
-    {
-      "id": "9",
-      "nombre": "asdas",
-      "planeta": "asdasdsa",
-      "nivelPoder": "123"
-    },
-    {
-      "id": "10",
+      "id": "60e6",
       "nombre": "asd",
       "planeta": "asd",
-      "nivelPoder": "12"
+      "nivelPoder": "1"
     },
     {
-      "id": "11",
+      "id": "",
       "nombre": "asd",
-      "planeta": "asddsa",
-      "nivelPoder": "1222"
+      "planeta": "asd",
+      "nivelPoder": {}
+    },
+    {
+      "id": "",
+      "nombre": "asdas",
+      "planeta": "asdas1",
+      "nivelPoder": 0
+    },
+    {
+      "id": "",
+      "nombre": "sad",
+      "planeta": "daa",
+      "nivelPoder": 12
+    },
+    {
+      "id": "",
+      "nombre": "",
+      "planeta": "",
+      "nivelPoder": 0
+    },
+    {
+      "id": "",
+      "nombre": "",
+      "planeta": "",
+      "nivelPoder": 0
     }
   ]
 }
