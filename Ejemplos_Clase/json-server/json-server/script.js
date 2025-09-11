@@ -1,5 +1,5 @@
 // Declaracion de constantes ------------------------------------------------------------------
-const URL = "http://localhost:3001/usuarios";
+const URL = "http://localhost:3000/usuarios";
 const listaUsers = document.getElementById("listaUsers");
 const formUsers = document.getElementById("usersForm");
 const inputNombre = document.getElementById("nombre");
