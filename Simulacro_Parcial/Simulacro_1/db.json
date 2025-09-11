@@ -1,28 +1,70 @@
 {
   "extraterrestres": [
     {
-      "id":1,
+      "id": "1",
       "nombre": "Zorglum",
       "planeta": "Nebulon-5",
       "nivelPoder": 87
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "Xelara",
       "planeta": "Andrómeda-X",
       "nivelPoder": 95
     },
     {
-      "id": 3,
+      "id": "3",
       "nombre": "Bloop",
       "planeta": "Saturno",
       "nivelPoder": 42
     },
-{
-      "id": 4,
+    {
+      "id": "4",
       "nombre": "Lionel Messi",
       "planeta": "Tierra",
       "nivelPoder": 100
+    },
+    {
+      "id": 5,
+      "nombre": "Matias",
+      "planeta": "pp",
+      "nivelPoder": "50"
+    },
+    {
+      "id": 6,
+      "nombre": "Matias",
+      "planeta": "pp",
+      "nivelPoder": "50"
+    },
+    {
+      "id": 7,
+      "nombre": "Matias",
+      "planeta": "pp",
+      "nivelPoder": "50"
+    },
+    {
+      "id": 8,
+      "nombre": "Matias",
+      "planeta": "pp",
+      "nivelPoder": "50"
+    },
+    {
+      "id": "9",
+      "nombre": "asdas",
+      "planeta": "asdasdsa",
+      "nivelPoder": "123"
+    },
+    {
+      "id": "10",
+      "nombre": "asd",
+      "planeta": "asd",
+      "nivelPoder": "12"
+    },
+    {
+      "id": "11",
+      "nombre": "asd",
+      "planeta": "asddsa",
+      "nivelPoder": "1222"
     }
   ]
 }
