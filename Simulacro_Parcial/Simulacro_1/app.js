@@ -74,7 +74,8 @@ async function cargarJSON() {
 
 async function eliminar(id) {
     try { 
-        await fetch(`${URL}/${id}`, { method: "DELETE" });  
+        await fetch(`${URL}/${id}`, { method: "DELETE" });
+        await cargarJSON();  
     } catch (error) {
          console.error("Error al intentar eliminar:", error);
     }

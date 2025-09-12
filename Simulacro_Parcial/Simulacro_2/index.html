@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulacro 2</title>
+
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <section id="formulario-contendor">
+            <h1>Dioses</h1>
+            <form>
+                <div class="form-group">
+                    <label for="id">Id:</label>
+                    <input type="number" id="id" placeholder="id" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Nombre del Dios" required>
+                </div>
+                <div class="form-group">
+                    <label for="dominio">Dominio:</label>
+                    <input type="text" id="dominio" placeholder="Ingrese Dominio" required>
+                </div>
+                <div class="form-group">
+                    <label for="simbolo">Simbolo:</label>
+                    <input type="text" id="simbolo"  placeholder="Tridente" required>
+                </div>
+                <div class="form-group">
+                    <label for="poder">Poder:</label>
+                    <input type="number" id="poder"  placeholder="0-100" min="0" max="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" id="ciudad"  placeholder="Atenas"  required>
+                </div>
+
+                <div id="botones"> 
+                    <button id="btnFiltrar" type="button">Filtrar Dioses</button>
+                    <button id="btnModificar" type="button">Modificar Dios</button>
+                    <button id="btnAgregar" type="button">Agregar Dios</button>
+                </div>  
+            </form>
+        </section>
+
+        <section id="ver-json">
+            <h1>Listado de Dioses</h1>
+            <div id="resultado">
+
+            </div>
+        </section>
+    </main>
+    <aside></aside>
+    <footer>
+        <p>Alumno: <strong>Matias Fresnadillo</strong></p>
+    </footer>
+</body>
+</html>
