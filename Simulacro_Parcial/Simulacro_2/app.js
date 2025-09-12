@@ -204,7 +204,7 @@ async function modificar() {
 }
 
 function limpiarCampos(){
-    InputId.value == ""
+    InputId.value = ""
     InputNombre.value = ""
     InputDominio.value = ""
     InputSimbolo.value = ""

@@ -2,7 +2,7 @@
   "dioses": [
     {
       "id": "1",
-      "nombre": "Zeus",
+      "nombre": "Zeus1",
       "dominio": "Cielo y trueno",
       "simbolo": "Rayo",
       "poder": 98,
@@ -18,7 +18,7 @@
     },
     {
       "id": "3",
-      "nombre": "Hades",
+      "nombre": "Hades1",
       "dominio": "Inframundo",
       "simbolo": "Casco de invisibilidad",
       "poder": 93,
@@ -55,6 +55,14 @@
       "simbolo": "Concha marina",
       "poder": 80,
       "ciudad": "Chipre"
+    },
+    {
+      "id": 8,
+      "nombre": "Matias",
+      "dominio": "Matias",
+      "simbolo": "Matias",
+      "poder": 98,
+      "ciudad": "Mar del Plata"
     }
   ]
 }
