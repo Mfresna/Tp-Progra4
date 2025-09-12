@@ -1,11 +1,24 @@
-:root {
-    --colorPrincipal: rgba(189, 191, 174, 1);
-    --colorSecundario: rgba(107, 114, 102, 1);
-    --colorTerciario: rgba(32, 38, 27, 1);
-    --colorFondoTarjeta: #f3f3f3;
-    --sombra: rgba(32, 38, 27, 0.3);
-    --colorBoton: rgba(68, 196, 175, 1);
-    --fuenteBase: "Segoe UI", Roboto, sans-serif;
+
+/* Tema claro */
+:root[data-theme="claro"] {
+  --colorPrincipal: #ffffff;
+  --colorSecundario: #f0f0f0;
+  --colorTerciario: #222222;
+  --colorFondoTarjeta: #fafafa;
+  --sombra: rgba(0, 0, 0, 0.15);
+  --colorBoton: #0077b6;
+  --fuenteBase: "Segoe UI", Roboto, sans-serif;
+}
+
+/* Tema oscuro */
+:root[data-theme="oscuro"] {
+  --colorPrincipal: #222222;
+  --colorSecundario: #333333;
+  --colorTerciario: #f0f0f0;
+  --colorFondoTarjeta: #2b2b2b;
+  --sombra: rgba(255, 255, 255, 0.1);
+  --colorBoton: #48c774;
+  --fuenteBase: "Segoe UI", Roboto, sans-serif;
 }
 
 
