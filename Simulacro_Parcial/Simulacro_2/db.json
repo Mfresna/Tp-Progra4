@@ -1,30 +1,6 @@
 {
   "dioses": [
     {
-      "id": "1",
-      "nombre": "Zeus1",
-      "dominio": "Cielo y trueno",
-      "simbolo": "Rayo",
-      "poder": 98,
-      "ciudad": "Olimpo"
-    },
-    {
-      "id": "2",
-      "nombre": "Poseidón",
-      "dominio": "Mar y terremotos",
-      "simbolo": "Tridente",
-      "poder": 95,
-      "ciudad": "Atlántida"
-    },
-    {
-      "id": "3",
-      "nombre": "Hades1",
-      "dominio": "Inframundo",
-      "simbolo": "Casco de invisibilidad",
-      "poder": 93,
-      "ciudad": "Inframundo"
-    },
-    {
       "id": "4",
       "nombre": "Atenea",
       "dominio": "Sabiduría y guerra estratégica",
@@ -39,22 +15,6 @@
       "simbolo": "Lira",
       "poder": 89,
       "ciudad": "Delfos"
-    },
-    {
-      "id": "6",
-      "nombre": "Artemisa",
-      "dominio": "Caza y luna",
-      "simbolo": "Arco y flechas",
-      "poder": 87,
-      "ciudad": "Bosques1"
-    },
-    {
-      "id": "8",
-      "nombre": "Afrodita",
-      "dominio": "Amor y belleza",
-      "simbolo": "Concha marina",
-      "poder": 80,
-      "ciudad": "Chipre"
     },
     {
       "id": 8,
