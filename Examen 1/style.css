@@ -1,0 +1,180 @@
+:root {
+  --colorPrincipal: #ffffff;
+  --colorSecundario: #f0f0f0;
+  --colorTerciario: #222222;
+  --colorFondoTarjeta: #fafafa;
+  --sombra: rgba(0, 0, 0, 0.15);
+  --colorBoton: #0077b6;
+  --fuenteBase: "Segoe UI", Roboto, sans-serif;
+}
+
+
+* {
+    font-family: var(--fuenteBase);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background: var(--colorPrincipal);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex: 1;    /*para que ocupe todo el ancho segun cantidad de columnas*/
+    gap: 40px;
+    padding: 40px;
+}
+
+
+main section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--colorSecundario);
+    border-radius: 16px;
+    box-shadow: 15px var(--sombra);
+    padding: 30px;
+}
+
+/*Titulo de cada ventana*/
+main section h1 {
+    margin-bottom: 20px;
+    color: var(--colorTerciario);
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: var(--colorTerciario);
+    color: var(--colorSecundario);
+    padding: 15px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px;
+}
+
+/*CADA RECUADRO DE LABEL + INPUT*/
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/*LABEL*/
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--colorTerciario);
+}
+
+/*INPUT*/
+.form-group input {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+/*====== BOTONES ========*/
+#botones {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+
+#botones button {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--colorBoton);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#botones button:hover {
+    background-color: #52b89d;
+}
+
+/* RESULTADOS LISTADO */
+#resultado {
+  list-style: none; /* saca los puntos de la lista */
+  overflow-y: auto; /*Me muestra el scroll solo si lo necesita*/
+  max-height: 450px;
+  padding: 5px;
+  margin: 20px auto;
+  width: 100%;
+}
+
+#resultado li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--colorFondoTarjeta);
+  margin: 8px 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+  font-size: 16px;
+  color: #333;
+}
+
+#resultado li div{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Oscurece la etiqueta cuando estoy encima*/
+#resultado li:hover {
+  background-color: #e9e9e9;
+}
+
+/*BOTONES GENERADOS CON JS*/
+
+#resultado .eliminar {
+  background-color: #e74c3c;
+  border: none;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline;
+  color: white;
+  font-size: 14px;
+
+  transition: background-color 0.2s ease;
+}
+
+#resultado .modificar {
+  background-color: var(--colorBoton);
+  border: none;
+  padding: 6px 12px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+
+  transition: background-color 0.2s ease;
+}
