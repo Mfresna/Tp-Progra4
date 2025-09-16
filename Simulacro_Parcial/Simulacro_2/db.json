@@ -17,12 +17,20 @@
       "ciudad": "Delfos"
     },
     {
-      "id": 8,
+      "id": "8",
       "nombre": "Matias",
       "dominio": "Matias",
       "simbolo": "Matias",
       "poder": 98,
       "ciudad": "Mar del Plata"
+    },
+    {
+      "id": 4,
+      "nombre": "Sofia",
+      "dominio": "aire",
+      "simbolo": "Ansiedad",
+      "poder": 100,
+      "ciudad": "Mdp"
     }
   ]
 }
