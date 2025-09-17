@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!-- FRESNADILLO MATIAS - 39338136 - COM 7 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen 1 - Programacion IV</title>
+
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <nav></nav> 
+    </header>
+
+    <main>
+        <section id="formulario-contendor">
+            <h1>Formulario Profesores</h1>
+            <form>
+                <div class="form-group">
+                    <label for="id">Id:</label>
+                    <input type="text" id="id" placeholder="id" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Nombre del Profesor" required>
+                </div>
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" placeholder="Ingrese la Edad" min="0" max="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="materia">Materia:</label>
+                    <input type="text" id="materia" placeholder="Ingrese la Materia" required>
+                </div>
+
+                <div id="botones">
+                    <button id="btnLimpiar" type="button">Limpiar Formulario</button>
+                    <button id="btnModificar" type="button">Editar Profesor</button>
+                    <button id="btnAgregar" type="button">Agregar Profesor</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="ver-json">
+            <h1>Listado de Profesores</h1>
+            <div id="resultado">
+                <!--ACA VA EL RESULTADO GENERADO POR JS -->
+            </div>
+        </section>
+    </main>   
+
+    <aside></aside>
+
+    <footer>
+        <p>Alumno: <strong>Matias Fresnadillo</strong> • DNI: 39338136  •  Comisión 7</p>
+    </footer>
+
+</body>
+</html>

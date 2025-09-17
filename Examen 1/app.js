@@ -208,3 +208,61 @@ btnModificar.addEventListener("click", modificar);
 btnAgregar.addEventListener("click",agregar);
 
 cargarJSON();
+
+
+
+
+
+async function cargarJSON() {
+  try {
+    let response = await fetch(URL);
+    let objJSON = await response.json();
+
+    totalRegistros = objJSON.length;
+
+    respuestabox.innerHTML = "";
+
+    objJSON.forEach(obj => {
+        let tarjeta = document.createElement("li");
+        let botonera = document.createElement("div");
+
+        let btnEliminar = document.createElement("button");
+        let btnModificar = document.createElement("button");
+
+        tarjeta.innerHTML =
+            `<p> Nombre: <strong>${obj.nombre}</strong><br>
+                Planeta: ${obj.planeta}<br>
+                Nivel Poder: ${obj.nivelPoder}
+            </p>`;
+
+        // MODIFICAR
+        btnModificar.classList.add("modificar");
+        btnModificar.textContent = "Modificar";
+        btnModificar.type = "button";
+        btnModificar.addEventListener("click", () => {
+            event.preventDefault();
+            idInput.value = obj.id;
+            nombreInput.value = obj.nombre;
+            planetaInput.value = obj.planeta;
+            nivelInput.value = obj.nivelPoder;
+        });
+
+        // ELIMINAR
+        btnEliminar.classList.add("eliminar");
+        btnEliminar.textContent = "Eliminar";
+        btnEliminar.type = "button";
+        btnEliminar.addEventListener("click", () => {
+            event.preventDefault();
+            eliminar(obj.id);
+        });
+
+        botonera.appendChild(btnModificar);
+        botonera.appendChild(btnEliminar);
+
+        tarjeta.appendChild(botonera);
+        respuestabox.appendChild(tarjeta);
+    });
+  } catch (error) {
+    console.error("Error al cargar Json:", error);
+  }
+}

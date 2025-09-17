@@ -1,0 +1,40 @@
+{
+  "profesores": [
+    {
+      "id": "def8",
+      "nombre": "Adrian",
+      "edad": "44",
+      "materia": "Base de Datos"
+    },
+    {
+      "id": "a8e5",
+      "nombre": "Joni",
+      "edad": "27",
+      "materia": "Programacion IV"
+    },
+    {
+      "id": "07db",
+      "nombre": "Priscila",
+      "edad": "29",
+      "materia": "Matematica"
+    },
+    {
+      "id": "6058",
+      "nombre": "Matias",
+      "edad": "29",
+      "materia": "Arquitectura"
+    },
+    {
+      "id": "4c6d",
+      "nombre": "Agustina",
+      "edad": "31",
+      "materia": "Contadora"
+    },
+    {
+      "nombre": "Matias",
+      "edad": "30",
+      "materia": "Futuro Programador",
+      "id": "b73c"
+    }
+  ]
+}
