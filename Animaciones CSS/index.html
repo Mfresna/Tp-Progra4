@@ -3,133 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edificio en construcción</title>
+  <title>404 - Página no encontrada</title>
   <style>
+    /* Fondo y centrar contenido */
     body {
-      background: linear-gradient(#87ceeb, #e0f7fa); /* cielo */
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      height: 100vh;
       margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+      font-family: 'Arial', sans-serif;
+      text-align: center;
       overflow: hidden;
     }
 
-    /* 🏢 Edificio */
-    .edificio {
-      width: 200px;
-      height: 300px;
-      background: #b0bec5;
-      position: relative;
-      border: 5px solid #546e7a;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      padding: 10px;
-      z-index: 1;
+    h1 {
+      font-size: 6rem;
+      color: #37474f;
+      margin: 20px 0 10px;
+      animation: vibrar 1.5s infinite;
     }
 
-    .piso {
-      flex: 1;
-      border-bottom: 2px dashed #37474f; /* simula construcción */
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
+    p {
+      font-size: 1.5rem;
+      color: #607d8b;
+      margin-bottom: 40px;
     }
 
-    .ventana {
-      width: 30px;
-      height: 30px;
+    /* GIF de la casa */
+    .gif-casa {
+      width: 300px;
+      height: auto;
+      margin-bottom: 30px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* Botón volver */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #37474f;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
       background: #263238;
-      border: 2px solid #90a4ae;
+      transform: scale(1.05);
     }
 
-    /* 🏗️ Grúa */
-    .grua {
-      position: absolute;
-      top: 50px;
-      left: 50%;
-      transform: translateX(-200px);
-      width: 250px;
-      height: 350px;
+    /* Animaciones */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
     }
 
-    .torre {
-      width: 20px;
-      height: 350px;
-      background: #ffb300;
-      position: absolute;
-      left: 40px;
-      bottom: 0;
-    }
-
-    .brazo {
-      width: 200px;
-      height: 20px;
-      background: #ffa000;
-      position: absolute;
-      top: 20px;
-      left: 40px;
-    }
-
-    .cuerda {
-      width: 2px;
-      height: 150px;
-      background: #333;
-      position: absolute;
-      top: 20px;
-      left: 180px;
-      animation: subirBajar 4s infinite ease-in-out;
-    }
-
-    .carga {
-      width: 40px;
-      height: 40px;
-      background: #6d4c41;
-      position: absolute;
-      top: 150px;
-      left: 160px;
-      animation: moverCarga 4s infinite ease-in-out;
-    }
-
-    /* 🎬 Animaciones */
-    @keyframes subirBajar {
-      0%   { height: 150px; }
-      50%  { height: 250px; }
-      100% { height: 150px; }
-    }
-
-    @keyframes moverCarga {
-      0%   { top: 150px; }
-      50%  { top: 250px; }
-      100% { top: 150px; }
+    @keyframes vibrar {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-3px); }
+      50% { transform: translateX(3px); }
+      75% { transform: translateX(-3px); }
     }
   </style>
 </head>
 <body>
-  <div class="edificio">
-    <div class="piso">
-      <div class="ventana"></div>
-      <div class="ventana"></div>
-      <div class="ventana"></div>
-    </div>
-    <div class="piso">
-      <div class="ventana"></div>
-      <div class="ventana"></div>
-      <div class="ventana"></div>
-    </div>
-    <div class="piso">
-      <div class="ventana"></div>
-      <div class="ventana"></div>
-      <div class="ventana"></div>
-    </div>
-  </div>
-
-  <div class="grua">
-    <div class="torre"></div>
-    <div class="brazo"></div>
-    <div class="cuerda"></div>
-    <div class="carga"></div>
-  </div>
+  <h1>404</h1>
+  <p>Página no encontrada</p>
+  <img src="https://i.pinimg.com/originals/46/cb/a9/46cba9f93a3d437db6d42f4bcd1a5f5f.gif" alt="Casa animada" class="gif-casa">
+  <a href="/" class="btn">Volver al inicio</a>
 </body>
 </html>
