@@ -1,1 +1,20 @@
-{}
+{
+  "productos": [
+        { "id": "1", "nombre": "PlayStation 5", "precio": 5000 },
+        { "id": "2", "nombre": "Xbox Series X", "precio": 4800 },
+        { "id": "3", "nombre": "Nintendo Switch OLED", "precio": 3500 },
+        { "id": "4", "nombre": "PlayStation 4 Slim", "precio": 2500 },
+        { "id": "5", "nombre": "Xbox Series S", "precio": 3000 },
+        { "id": "6", "nombre": "Steam Deck", "precio": 4200 },
+        { "id": "7", "nombre": "Meta Quest 3", "precio": 3900 },
+        { "id": "8", "nombre": "Gaming Laptop ASUS ROG", "precio": 8500 },
+        { "id": "9", "nombre": "Teclado Mecánico RGB", "precio": 350 },
+        { "id": "10", "nombre": "Mouse Gamer Logitech G502", "precio": 250 },
+        { "id": "11", "nombre": "Monitor Curvo Samsung 27\"", "precio": 1200 },
+        { "id": "12", "nombre": "Auriculares HyperX Cloud II", "precio": 400 },
+        { "id": "13", "nombre": "Silla Gamer Corsair T3", "precio": 1100 },
+        { "id": "14", "nombre": "Control DualSense", "precio": 300 },
+        { "id": "15", "nombre": "SSD NVMe 1TB", "precio": 600 }
+    ]
+
+}
