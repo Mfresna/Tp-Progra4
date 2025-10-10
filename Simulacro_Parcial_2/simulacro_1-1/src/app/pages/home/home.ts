@@ -1,27 +1,41 @@
 import { Component, OnInit } from '@angular/core';
-import { Route } from '@angular/router';
+import { Route, Router, RouterLink } from '@angular/router';
 import { ProductosServicio } from '../../services/productos-servicio';
+import Producto from '../../models/producto';
+
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
 export class Home implements OnInit{
 
   constructor(
-    public Service : ProductosServicio){}
+    public service : ProductosServicio,
+    private router : Router){}
 
   ngOnInit(): void {
     this.get()
   }
 
   get(){
-  this.Service.getProductos().subscribe({
-    next: (data) => { this.Service.productos = data},
-    error: (e) => { console.log(e)}
-  })
+    this.service.getProductos().subscribe({
+      next: (data) => { this.service.productos = data},
+      error: (e) => { console.log(e)}
+    })
+  }
+
+  delete(id : string){
+    this.service.deleteProducto(id).subscribe({
+      next: (data) => { this.get() },
+      error: (error) => { console.log(error) }
+    })
+  }
+
+  editar(p: Producto) {
+    this.router.navigate(['/formulario', p.id]);
   }
 
 }
