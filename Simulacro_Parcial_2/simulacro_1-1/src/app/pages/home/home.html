@@ -1,1 +1,15 @@
-<p>home works!</p>
+<section id="titulo">
+    <h1>PRODUCTOS</h1>
+</section>
+<section id="listado">
+    <ul>
+        @for (item of Service.productos; track $index) {
+            <li class="tarjeta">
+                <a [routerLink]="item.id">
+                    <h4> {{ item.nombre }} </h4>
+                </a>
+                <button (click)="delete(item.id)">Eliminar</button>
+            </li>
+        }
+    </ul>    
+</section>
