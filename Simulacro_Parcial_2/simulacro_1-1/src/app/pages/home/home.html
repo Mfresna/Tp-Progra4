@@ -1,15 +1,13 @@
 <section id="titulo">
     <h1>PRODUCTOS</h1>
 </section>
-<section id="listado">
+<section>
     <ul>
-        @for (item of Service.productos; track $index) {
-            <li class="tarjeta">
-                <a [routerLink]="item.id">
-                    <h4> {{ item.nombre }} </h4>
-                </a>
-                <button (click)="delete(item.id)">Eliminar</button>
-            </li>
-        }
-    </ul>    
+    @for (item of Service.productos; track $index) {
+        <li>
+                <h3> {{ item.nombre }} </h3>
+                <h5> {{ item.precio }} </h5>
+        </li>
+    }
+</ul>
 </section>
