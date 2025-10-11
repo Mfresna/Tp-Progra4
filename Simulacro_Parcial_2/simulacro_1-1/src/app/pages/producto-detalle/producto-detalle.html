@@ -1,1 +1,19 @@
-<p>producto-detalle works!</p>
+@if(item) {
+  <article class="producto">
+
+    <header>
+      <h2>{{ item.nombre }}</h2>
+    </header>
+    
+    <section class="detalles">
+      <p><strong>ID:</strong> {{ item.id }}</p>
+      <p><strong>Precio:</strong> {{ item.precio }}</p>
+    </section>
+
+    <footer class="acciones">
+      <button type="button" (click)="editar(item)">Editar</button>
+      <button type="button" (click)="delete(item.id)">Eliminar</button>
+    </footer>
+  </article>
+}
+

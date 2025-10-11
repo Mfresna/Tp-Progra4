@@ -1,66 +1,84 @@
 {
-    "productos": [
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000}
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000},
-        {"id": "0" , "nombre": "Computadora" , "precio": 5000}
-
-    ]
+  "productos": [
+    {
+      "nombre": "Computadora",
+      "precio": 5002,
+      "id": "1"
+    },
+    {
+      "nombre": "Mouse",
+      "precio": 251,
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "nombre": "Teclado",
+      "precio": 600
+    },
+    {
+      "id": "4",
+      "nombre": "Monitor",
+      "precio": 1200
+    },
+    {
+      "id": "5",
+      "nombre": "Impresora",
+      "precio": 1800
+    },
+    {
+      "id": "6",
+      "nombre": "Laptop",
+      "precio": 7500
+    },
+    {
+      "nombre": "Auriculares",
+      "precio": 451,
+      "id": "7"
+    },
+    {
+      "id": "8",
+      "nombre": "Tablet",
+      "precio": 3500
+    },
+    {
+      "id": "9",
+      "nombre": "Disco Duro",
+      "precio": 900
+    },
+    {
+      "id": "10",
+      "nombre": "Memoria RAM",
+      "precio": 1200
+    },
+    {
+      "id": "11",
+      "nombre": "Fuente de Poder",
+      "precio": 850
+    },
+    {
+      "id": "12",
+      "nombre": "Placa de Video",
+      "precio": 6700
+    },
+    {
+      "id": "13",
+      "nombre": "Gabinete",
+      "precio": 1500
+    },
+    {
+      "id": "14",
+      "nombre": "Router",
+      "precio": 400
+    },
+    {
+      "id": "15",
+      "nombre": "Cámara Web",
+      "precio": 700
+    },
+    {
+      "id": "",
+      "nombre": "Hola",
+      "precio": 1
+    }
+  ]
 }

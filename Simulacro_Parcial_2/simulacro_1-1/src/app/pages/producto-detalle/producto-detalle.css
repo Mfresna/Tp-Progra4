@@ -1,0 +1,63 @@
+/* === Tarjeta de producto === */
+.producto {
+  background-color: var(--colorFondoTarjeta);
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px var(--sombra);
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 350px;
+  font-family: var(--fuenteBase);
+  color: var(--colorTerciario);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* === Encabezado === */
+.producto header h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--colorTerciario);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* === Detalles === */
+.producto .detalles p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+.producto .detalles strong {
+  color: var(--colorBoton);
+}
+
+/* === Acciones === */
+.producto .acciones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.producto .acciones button {
+  background-color: var(--colorBoton);
+  color: var(--colorPrincipal);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.producto .acciones button:hover {
+  background-color: #0096c7;
+  transform: scale(1.03);
+}
+
+.producto .acciones button:nth-child(2) {
+  background-color: #d62828;
+}
+
+.producto .acciones button:nth-child(2):hover {
+  background-color: #e63946;
+}

@@ -27,15 +27,4 @@ export class Home implements OnInit{
     })
   }
 
-  delete(id : string){
-    this.service.deleteProducto(id).subscribe({
-      next: (data) => { this.get() },
-      error: (error) => { console.log(error) }
-    })
-  }
-
-  editar(p: Producto) {
-    this.router.navigate(['/formulario', p.id]);
-  }
-
 }

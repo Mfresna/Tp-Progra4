@@ -12,6 +12,7 @@ import  Movie  from '../../models/Movie';
   styleUrls: ['./movie-form-edit.css']
 })
 export class MovieFormEdit implements OnInit {
+  
   movieForm!: FormGroup;
   movieId!: string;
 
