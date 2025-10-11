@@ -1,5 +1,5 @@
-/* === Tarjeta de producto === */
-.producto {
+/* === Tarjeta de item-detalle === */
+.item-detalle {
   background-color: var(--colorFondoTarjeta);
   border-radius: 1rem;
   box-shadow: 0 4px 10px var(--sombra);
@@ -12,7 +12,7 @@
 }
 
 /* === Encabezado === */
-.producto header h2 {
+.item-detalle header h2 {
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--colorTerciario);
@@ -22,23 +22,23 @@
 }
 
 /* === Detalles === */
-.producto .detalles p {
+.item-detalle .detalles p {
   margin: 0.25rem 0;
   font-size: 0.95rem;
 }
 
-.producto .detalles strong {
+.item-detalle .detalles strong {
   color: var(--colorBoton);
 }
 
 /* === Acciones === */
-.producto .acciones {
+.item-detalle .acciones {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
 }
 
-.producto .acciones button {
+.item-detalle .acciones button {
   background-color: var(--colorBoton);
   color: var(--colorPrincipal);
   border: none;
@@ -49,15 +49,15 @@
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.producto .acciones button:hover {
+.item-detalle .acciones button:hover {
   background-color: #0096c7;
   transform: scale(1.03);
 }
 
-.producto .acciones button:nth-child(2) {
+.item-detalle .acciones button:nth-child(2) {
   background-color: #d62828;
 }
 
-.producto .acciones button:nth-child(2):hover {
+.item-detalle .acciones button:nth-child(2):hover {
   background-color: #e63946;
 }

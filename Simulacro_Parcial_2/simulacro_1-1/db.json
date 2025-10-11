@@ -21,9 +21,9 @@
       "precio": 1200
     },
     {
-      "id": "5",
       "nombre": "Impresora",
-      "precio": 1800
+      "precio": 1802,
+      "id": "5"
     },
     {
       "id": "6",
@@ -79,6 +79,11 @@
       "id": "",
       "nombre": "Hola",
       "precio": 1
+    },
+    {
+      "id": "1ef2",
+      "nombre": "dasdas",
+      "precio": null
     }
   ]
 }

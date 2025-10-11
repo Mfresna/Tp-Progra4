@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductosServicio } from '../../services/productos-servicio';
 import { Location } from '@angular/common';
@@ -28,8 +28,8 @@ export class ProductoFormulario implements OnInit{
       this.id! = this.route.snapshot.params['id'];
 
       this.formulario = this.fb.group({
-        nombre: [''],
-        precio: ['']
+        nombre: ['',[Validators.required,Validators.minLength(3)]],
+        precio: ['',[Validators.required,Validators.min(0)]]
       });
 
       /*Verifica si hay ID*/
