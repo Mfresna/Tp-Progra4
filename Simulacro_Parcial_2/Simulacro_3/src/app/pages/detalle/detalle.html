@@ -1,1 +1,19 @@
-<p>detalle works!</p>
+@if(item) {
+  <article class="item-detalle">
+
+    <header>
+      <h2>{{ item.apellido }}, {{ item.nombre }}</h2>
+    </header>
+
+    <section class="detalles">
+      <p><strong>ID:</strong> {{ item.id }}</p>
+      <p><strong>Materia:</strong> {{ item.materia }}</p>
+      <p><strong>Edad:</strong> {{ item.edad }}</p>
+    </section>
+
+    <footer class="acciones">
+      <button type="button" (click)="editar(item)">Editar</button>
+      <button type="button" (click)="delete(item.id)">Eliminar</button>
+    </footer>
+  </article>
+}

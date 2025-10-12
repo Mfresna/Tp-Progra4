@@ -1,1 +1,29 @@
-<p>formulario works!</p>
+<form [formGroup]="formulario" (submit)="enviarFormulario()">
+
+  <fieldset>
+    <label for="nombre">Nombre: </label>
+    <input type="text" id="nombre" formControlName="nombre">
+  </fieldset>
+
+  <fieldset>
+    <label for="apellido">Apellido: </label>
+    <input type="text" id="apellido" formControlName="apellido">
+  </fieldset>
+
+  <fieldset>
+    <label for="materia">Materia: </label>
+    <input type="text" id="materia" formControlName="materia">
+  </fieldset>
+
+    <fieldset>
+    <label for="edad">Edad: </label>
+    <input type="number" id="edad" formControlName="edad">
+  </fieldset>
+
+  <button type="submit" [disabled]="formulario.invalid">
+    {{ editar ? 'ACTUALIZAR' : 'GUARDAR' }}
+  </button>
+
+  <button type="button" (click)="volver()">VOLVER</button>
+
+</form>
