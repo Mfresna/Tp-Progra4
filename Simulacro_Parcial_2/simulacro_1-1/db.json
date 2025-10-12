@@ -2,7 +2,7 @@
   "productos": [
     {
       "nombre": "Computadora",
-      "precio": 5002,
+      "precio": 5000,
       "id": "1"
     },
     {
@@ -14,11 +14,6 @@
       "id": "3",
       "nombre": "Teclado",
       "precio": 600
-    },
-    {
-      "id": "4",
-      "nombre": "Monitor",
-      "precio": 1200
     },
     {
       "nombre": "Impresora",
@@ -81,9 +76,9 @@
       "precio": 1
     },
     {
-      "id": "1ef2",
-      "nombre": "dasdas",
-      "precio": null
+      "nombre": "producto nuevo",
+      "precio": 600,
+      "id": "eee6"
     }
   ]
 }
