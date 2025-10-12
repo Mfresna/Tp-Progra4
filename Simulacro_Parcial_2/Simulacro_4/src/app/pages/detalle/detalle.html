@@ -1,1 +1,21 @@
-<p>detalle works!</p>
+@if(item) {
+  <article class="item-detalle">
+
+    <header>
+      <h2>{{ item.marca }} - {{ item.modelo }}</h2>
+    </header>
+
+    <section class="detalles">
+      <p><strong>ID:</strong> {{ item.id }}</p>
+      <p><strong>Año:</strong> {{ item.anio }}</p>
+      <p><strong>Color:</strong> {{ item.color }}</p>
+      <p><strong>Precio:</strong> {{ item.precio }}</p>
+      <p><strong>Combustible:</strong> {{ item.combustible }}</p>
+    </section>
+
+    <footer class="acciones">
+      <button type="button" (click)="editar(item)">Editar</button>
+      <button type="button" (click)="delete(item.id)">Eliminar</button>
+    </footer>
+  </article>
+}

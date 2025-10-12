@@ -1,1 +1,39 @@
-<p>formulario works!</p>
+<form [formGroup]="formulario" (submit)="enviarFormulario()">
+
+  <fieldset>
+    <label for="marca">Marca: </label>
+    <input type="text" id="marca" formControlName="marca">
+  </fieldset>
+
+  <fieldset>
+    <label for="modelo">Modelo: </label>
+    <input type="text" id="modelo" formControlName="modelo">
+  </fieldset>
+
+  <fieldset>
+    <label for="anio">Año: </label>
+    <input type="number"  id="anio" formControlName="anio">
+  </fieldset>
+
+  <fieldset>
+    <label for="color">Color: </label>
+    <input type="text" id="color" formControlName="color">
+  </fieldset>
+
+  <fieldset>
+    <label for="precio">Precio: </label>
+    <input type="number" id="precio" formControlName="precio">
+  </fieldset>
+
+  <fieldset>
+    <label for="combustible">Combustible: </label>
+    <input type="text" id="combustible" formControlName="combustible">
+  </fieldset>
+
+  <button type="submit" [disabled]="formulario.invalid">
+    {{ editar ? 'ACTUALIZAR' : 'GUARDAR' }}
+  </button>
+
+  <button type="button" (click)="volver()">VOLVER</button>
+
+</form>

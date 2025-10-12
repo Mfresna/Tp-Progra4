@@ -1,1 +1,14 @@
-<p>home works!</p>
+<section id="titulo">
+    <h1>AUTOS</h1>
+</section>
+
+<section id="tarjetas">
+    <ul>
+        @for (item of service.autos; track $index) {
+            <li [routerLink]="item.id">
+                <p><strong>{{ item.marca }} - {{ item.modelo }} </strong></p>
+                <p>{{ item.anio }}</p>
+            </li>
+        }
+    </ul>
+</section>

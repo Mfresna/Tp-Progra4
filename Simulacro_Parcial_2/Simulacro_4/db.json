@@ -1,7 +1,7 @@
 {
   "autos": [
     {
-      "id": 1,
+      "id": "1",
       "marca": "Toyota",
       "modelo": "Corolla",
       "anio": 2022,
@@ -10,25 +10,16 @@
       "combustible": "Nafta"
     },
     {
-      "id": 2,
       "marca": "Ford",
       "modelo": "Focus",
       "anio": 2021,
       "color": "Azul",
-      "precio": 23000,
-      "combustible": "Diesel"
+      "precio": 23001,
+      "combustible": "Diesel",
+      "id": "2"
     },
     {
-      "id": 3,
-      "marca": "Tesla",
-      "modelo": "Model 3",
-      "anio": 2023,
-      "color": "Blanco",
-      "precio": 45000,
-      "combustible": "Eléctrico"
-    },
-    {
-      "id": 4,
+      "id": "4",
       "marca": "Chevrolet",
       "modelo": "Onix",
       "anio": 2020,
@@ -37,12 +28,21 @@
       "combustible": "Nafta"
     },
     {
-      "id": 5,
+      "id": "5",
       "marca": "Volkswagen",
       "modelo": "Golf",
       "anio": 2019,
       "color": "Negro",
       "precio": 20000,
+      "combustible": "Nafta"
+    },
+    {
+      "id": "0916",
+      "marca": "Fiat",
+      "modelo": "Siena",
+      "anio": 1996,
+      "color": "Gris",
+      "precio": 5000000,
       "combustible": "Nafta"
     }
   ]
