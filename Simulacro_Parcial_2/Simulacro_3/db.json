@@ -1,0 +1,38 @@
+{"profesores": [
+    {
+        "id": "1",
+        "nombre": "Juan",
+        "apellido": "Pérez",
+        "materia": "Matemáticas",
+        "edad": 45
+    },
+    {
+        "id": "2",
+        "nombre": "María",
+        "apellido": "Gómez",
+        "materia": "Historia",
+        "edad": 38
+    },
+    {
+        "id": "3",
+        "nombre": "Carlos",
+        "apellido": "Rodríguez",
+        "materia": "Física",
+        "edad": 50
+    },
+    {
+        "id": "4",
+        "nombre": "Lucía",
+        "apellido": "Fernández",
+        "materia": "Lengua",
+        "edad": 33
+    },
+    {
+        "id": "5",
+        "nombre": "Sofía",
+        "apellido": "Martínez",
+        "materia": "Química",
+        "edad": 41
+    }
+    ]
+}
