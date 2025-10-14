@@ -2,22 +2,28 @@
 
   <fieldset>
     <label for="marca">Marca: </label>
-    <input type="text" id="marca" formControlName="marca">
+    <input type="text" id="marca" formControlName="marca" [class.invalido]="formulario.get('marca')?.invalid && formulario.get('marca')?.touched">
+  
+    @if (formulario.get('marca')?.errors?.['required'] && formulario.get('marca')?.touched) {
+      <small>La marca es obligatoria.</small>
+    } @else if (formulario.get('marca')?.errors?.['minlength'] && formulario.get('marca')?.touched) {
+      <small>La marca es muy corta.</small>
+    }
   </fieldset>
 
   <fieldset>
     <label for="modelo">Modelo: </label>
-    <input type="text" id="modelo" formControlName="modelo">
+    <input type="number" id="modelo" formControlName="modelo">
   </fieldset>
 
   <fieldset>
     <label for="anio">Año: </label>
-    <input type="number"  id="anio" formControlName="anio">
+    <input type="number" id="anio" formControlName="anio">
   </fieldset>
 
   <fieldset>
     <label for="color">Color: </label>
-    <input type="text" id="color" formControlName="color">
+    <input type="number" id="color" formControlName="color">
   </fieldset>
 
   <fieldset>
@@ -25,9 +31,9 @@
     <input type="number" id="precio" formControlName="precio">
   </fieldset>
 
-  <fieldset>
+    <fieldset>
     <label for="combustible">Combustible: </label>
-    <input type="text" id="combustible" formControlName="combustible">
+    <input type="number" id="combustible" formControlName="combustible">
   </fieldset>
 
   <button type="submit" [disabled]="formulario.invalid">

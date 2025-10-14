@@ -38,7 +38,7 @@
   margin-top: 1rem;
 }
 
-.item-detalle .acciones button {
+.acciones button {
   background-color: var(--colorBoton);
   color: var(--colorPrincipal);
   border: none;
@@ -49,15 +49,15 @@
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.item-detalle .acciones button:hover {
+#editar:hover {
   background-color: #0096c7;
   transform: scale(1.03);
 }
 
-.item-detalle .acciones button:nth-child(2) {
+#eliminar {
   background-color: #d62828;
 }
 
-.item-detalle .acciones button:nth-child(2):hover {
+#eliminar:hover {
   background-color: #e63946;
 }
