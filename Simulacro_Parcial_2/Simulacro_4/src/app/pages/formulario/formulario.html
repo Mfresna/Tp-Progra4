@@ -75,3 +75,39 @@
   <button id="vovler" type="button" (click)="volver()">VOLVER</button>
 
 </form>
+
+
+
+
+<form [formGroup]="formulario" (submit)="enviarFormulario()">
+
+
+
+  <fieldset>
+    <label for="atributo">atributo: </label>
+    <input type="text" id="atributo" formControlName="atributo" [class.invalido]="formulario.get('atributo')?.invalid && formulario.get('atributo')?.touched">
+  
+    @if (formulario.get('atributo')?.errors?.['required'] && formulario.get('atributo')?.touched) {
+      <small>La atributo es obligatoria.</small>
+    } @else if (formulario.get('atributo')?.errors?.['minlength'] && formulario.get('atributo')?.touched) {
+      <small>La atributo es muy corta.</small>
+    }
+  </fieldset>
+
+  <fieldset>
+    <label for="nombre">Nombre: </label>
+    <input type="text" id="nombre" formControlName="nombre">
+  </fieldset>
+
+  <fieldset>
+    <label for="precio">Precio: </label>
+    <input type="number" id="precio" formControlName="precio">
+  </fieldset>
+
+  <button type="submit" [disabled]="formulario.invalid">
+    {{ editar ? 'ACTUALIZAR' : 'GUARDAR' }}
+  </button>
+
+  <button type="button" (click)="volver()">VOLVER</button>
+
+</form>
