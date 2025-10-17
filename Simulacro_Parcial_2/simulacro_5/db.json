@@ -23,6 +23,18 @@
       "marca": "Suzuki",
       "modelo": "GSX-S750",
       "cilindrada": 749
+    },
+    {
+      "id": "0b84",
+      "marca": "asd",
+      "modelo": "asd",
+      "cilindrada": "1"
+    },
+    {
+      "id": "0d3a",
+      "marca": "4",
+      "modelo": "",
+      "cilindrada": ""
     }
   ]
 }

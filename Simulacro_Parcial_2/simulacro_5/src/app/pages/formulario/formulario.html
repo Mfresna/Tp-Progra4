@@ -1,42 +1,42 @@
 <form [formGroup]="formulario" (submit)="enviarFormulario()">
 
-    <fieldset>
-      <label for="marca">Marca: </label>
-      <input type="text" id="marca" formControlName="marca" [class.invalido]="formulario.get('marca')?.invalid && formulario.get('marca')?.touched">
-    
-      @if (formulario.get('marca')?.errors?.['required'] && formulario.get('marca')?.touched) {
-        <small>La marca es obligatoria.</small>
-      } @else if (formulario.get('marca')?.errors?.['minlength'] && formulario.get('marca')?.touched) {
-        <small>La marca es muy corta.</small>
-      }
-    </fieldset>
+  <fieldset>
+    <label for="marca">Marca: </label>
+    <input type="text" id="marca" formControlName="marca" [class.invalido]="formulario.get('marca')?.invalid && formulario.get('marca')?.touched">
+  
+    @if (formulario.get('marca')?.errors?.['required'] && formulario.get('marca')?.touched) {
+      <small>La marca es obligatoria.</small>
+    } @else if (formulario.get('marca')?.errors?.['minlength'] && formulario.get('marca')?.touched) {
+      <small>La marca es muy corta.</small>
+    }
+  </fieldset>
 
-    <fieldset>
-      <label for="modelo">Modelo: </label>
-      <input type="text" id="modelo" formControlName="modelo" [class.invalido]="formulario.get('modelo')?.invalid && formulario.get('modelo')?.touched">
-    
-      @if (formulario.get('modelo')?.errors?.['required'] && formulario.get('modelo')?.touched) {
-        <small>El modelo es obligatorio.</small>
-      } @else if (formulario.get('modelo')?.errors?.['minlength'] && formulario.get('modelo')?.touched) {
-        <small>El modelo es muy corto.</small>
-      }
-    </fieldset>
+  <fieldset>
+    <label for="modelo">Modelo: </label>
+    <input type="text" id="modelo" formControlName="modelo" [class.invalido]="formulario.get('modelo')?.invalid && formulario.get('modelo')?.touched">
+  
+    @if (formulario.get('modelo')?.errors?.['required'] && formulario.get('modelo')?.touched) {
+      <small>El modelo es obligatorio.</small>
+    } @else if (formulario.get('modelo')?.errors?.['minlength'] && formulario.get('modelo')?.touched) {
+      <small>El modelo es muy corto.</small>
+    }
+  </fieldset>
 
-    <fieldset>
-      <label for="cilindrada">Cilindrada: </label>
-      <input type="text" id="cilindrada" formControlName="cilindrada" [class.invalido]="formulario.get('cilindrada')?.invalid && formulario.get('cilindrada')?.touched">
-    
-      @if (formulario.get('cilindrada')?.errors?.['required'] && formulario.get('cilindrada')?.touched) {
-        <small>La cilindrada es obligatoria.</small>
-      } @else if (formulario.get('cilindrada')?.errors?.['minlength'] && formulario.get('cilindrada')?.touched) {
-        <small>La cilindrada es muy corta.</small>
-      }
-    </fieldset>
+  <fieldset>
+    <label for="cilindrada">Cilindrada: </label>
+    <input type="text" id="cilindrada" formControlName="cilindrada" [class.invalido]="formulario.get('cilindrada')?.invalid && formulario.get('cilindrada')?.touched">
+  
+    @if (formulario.get('cilindrada')?.errors?.['required'] && formulario.get('cilindrada')?.touched) {
+      <small>La cilindrada es obligatoria.</small>
+    } @else if (formulario.get('cilindrada')?.errors?.['min'] && formulario.get('cilindrada')?.touched) {
+      <small>La cilindrada es muy corta.</small>
+    }
+  </fieldset>
 
-    <button type="submit" [disabled]="formulario.invalid">
-        {{ editar ? 'ACTUALIZAR' : 'GUARDAR' }}
-    </button>
+  <button id="enviar" type="submit" [disabled]="formulario.invalid">
+    {{ editar ? 'ACTUALIZAR' : 'GUARDAR' }}
+  </button>
 
-  <button type="button" (click)="volver()">VOLVER</button>
+  <button id="volver" type="button" (click)="volver()">VOLVER</button>
 
 </form>

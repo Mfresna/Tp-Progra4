@@ -43,22 +43,26 @@ export class Formulario implements OnInit {
   }
 
   enviarFormulario(): void {
-    if (this.editar && this.id) {
-      // Actualizar producto existente
-      const itemActualizar = { ...this.formulario.value, id: this.id };
-      this.service.updateMoto(itemActualizar).subscribe(() => {
-        alert('¡Actualizado correctamente!');
-        this.router.navigate(['/']);
-      });
-    } else {
-      // Crear nuevo producto
-      this.service.postMoto(this.formulario.value).subscribe({
-        next: () => {
-          alert('¡Creado correctamente!');
+    if(this.formulario.invalid){
+      alert("El forumulario es invalido!")
+    }else{
+      if (this.editar && this.id) {
+        // Actualizar producto existente
+        const itemActualizar = { ...this.formulario.value, id: this.id };
+        this.service.updateMoto(itemActualizar).subscribe(() => {
+          alert('¡Actualizado correctamente!');
           this.router.navigate(['/']);
-        },
-        error: (e) => console.error(e)
-      });
+        });
+      } else {
+        // Crear nuevo producto
+        this.service.postMoto(this.formulario.value).subscribe({
+          next: () => {
+            alert('¡Creado correctamente!');
+            this.router.navigate(['/']);
+          },
+          error: (e) => console.error(e)
+        });
+      }
     }
   }
 
