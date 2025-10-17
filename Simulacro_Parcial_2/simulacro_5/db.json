@@ -1,0 +1,34 @@
+{
+    "motos": [
+  {
+    "id": "1",
+    "marca": "Yamaha",
+    "modelo": "MT-03",
+    "cilindrada": 321
+  },
+  {
+    "id": "2",
+    "marca": "Honda",
+    "modelo": "CB500F",
+    "cilindrada": 471
+  },
+  {
+    "id": "3",
+    "marca": "Kawasaki",
+    "modelo": "Z400",
+    "cilindrada": 399
+  },
+  {
+    "id": "4",
+    "marca": "Suzuki",
+    "modelo": "GSX-S750",
+    "cilindrada": 749
+  },
+  {
+    "id": "5",
+    "marca": "BMW",
+    "modelo": "G310R",
+    "cilindrada": 313
+  }
+]
+}
