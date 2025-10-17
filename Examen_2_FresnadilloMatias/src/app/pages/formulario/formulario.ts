@@ -47,15 +47,18 @@ export class Formulario implements OnInit {
 
   enviarFormulario(): void {
     if(this.formulario.invalid){
+      // En caso de que el boton se habilite en el nav se verifica que realmente el formulario sea valido
       alert("El formulario no es Valido!")
     }else{
       if (this.editar && this.id) {
+        //ACTUALIZACION
         const itemActualizar = { ...this.formulario.value, id: this.id };
         this.service.updateCliente(itemActualizar).subscribe(() => {
           alert('¡Actualizado correctamente!');
           this.router.navigate(['/']);
         });
       } else {
+        //NUEVO
         this.service.postCliente(this.formulario.value).subscribe({
           next: () => {
             alert('¡Creado correctamente!');
