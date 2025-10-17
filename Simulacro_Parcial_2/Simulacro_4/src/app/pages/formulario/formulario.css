@@ -1,4 +1,3 @@
-/* Contenedor del formulario */
 form {
   max-width: 450px;
   margin: 2rem auto;
@@ -14,19 +13,6 @@ form {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-form:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px var(--sombra);
-}
-
-/* Título del formulario */
-form h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: var(--colorTerciario);
-  margin-bottom: 1rem;
-}
-
 /* Fieldset y labels */
 fieldset {
   border: none;
@@ -39,10 +25,8 @@ label {
   font-weight: 500;
 }
 
-/* Inputs y textarea */
-input[type="text"],
-input[type="number"],
-textarea {
+/* Recuadro de Inputs */
+input {
   padding: 0.6rem 0.8rem;
   border-radius: 0.5rem;
   border: 1px solid #ccc;
@@ -51,11 +35,15 @@ textarea {
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-input:focus,
-textarea:focus {
+input:focus {
   outline: none;
   border-color: var(--colorBoton);
   box-shadow: 0 0 6px rgba(0, 119, 182, 0.3);
+}
+
+input.invalido {
+  border: 2px solid #ff5c5c;
+  background: #ffecec;
 }
 
 /* Botones */
@@ -71,45 +59,33 @@ button {
 }
 
 /* Botón de enviar */
-button[type="submit"] {
+#enviar {
   background-color: var(--colorBoton);
   color: var(--colorPrincipal);
 }
 
-button[type="submit"]:hover {
+#enviar:hover {
   background-color: #0096c7;
   transform: scale(1.03);
 }
 
-button[type="submit"]:disabled {
+#enviar:disabled {
   background-color: #a0c4d9;
   cursor: not-allowed;
 }
 
 /* Botón de volver */
-button[type="button"] {
+#volver {
   background-color: var(--colorSecundario);
   color: var(--colorTerciario);
 }
 
-button[type="button"]:hover {
+#volver:hover {
   background-color: #e0e0e0;
   transform: scale(1.02);
 }
 
-/* Mensajes de error */
-.error {
-  color: #d62828;
-  font-size: 0.85rem;
-  margin-top: -0.5rem;
-}
-
-
-input.invalido {
-  border: 2px solid #ff5c5c;
-  background: #ffecec;
-}
-
-small {
+/* Mensaje de error */
+fieldset small {
   color: #ff3333;
 }

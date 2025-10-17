@@ -13,33 +13,65 @@
 
   <fieldset>
     <label for="modelo">Modelo: </label>
-    <input type="number" id="modelo" formControlName="modelo">
+    <input type="text" id="modelo" formControlName="modelo" [class.invalido]="formulario.get('modelo')?.invalid && formulario.get('modelo')?.touched">
+  
+    @if (formulario.get('modelo')?.errors?.['required'] && formulario.get('modelo')?.touched) {
+      <small>El modelo es obligatorio.</small>
+    } @else if (formulario.get('modelo')?.errors?.['minlength'] && formulario.get('modelo')?.touched) {
+      <small>El modelo es muy corto.</small>
+    }
   </fieldset>
 
   <fieldset>
     <label for="anio">Año: </label>
-    <input type="number" id="anio" formControlName="anio">
+    <input type="text" id="anio" formControlName="anio" [class.invalido]="formulario.get('anio')?.invalid && formulario.get('anio')?.touched">
+  
+    @if (formulario.get('anio')?.errors?.['required'] && formulario.get('anio')?.touched) {
+      <small>El año es obligatorio.</small>
+    } @else if (formulario.get('anio')?.errors?.['min'] && formulario.get('anio')?.touched) {
+      <small>El año no puede ser anterior a 1990.</small>
+    } @else if (formulario.get('anio')?.errors?.['max'] && formulario.get('anio')?.touched) {
+      <small>El año no puede ser posterior a 2025.</small>
+    }
   </fieldset>
 
   <fieldset>
     <label for="color">Color: </label>
-    <input type="number" id="color" formControlName="color">
+    <input type="text" id="color" formControlName="color" [class.invalido]="formulario.get('color')?.invalid && formulario.get('color')?.touched">
+  
+    @if (formulario.get('color')?.errors?.['required'] && formulario.get('color')?.touched) {
+      <small>El color es obligatorio.</small>
+    } @else if (formulario.get('color')?.errors?.['minlength'] && formulario.get('color')?.touched) {
+      <small>El color es muy corto.</small>
+    }
   </fieldset>
 
   <fieldset>
     <label for="precio">Precio: </label>
-    <input type="number" id="precio" formControlName="precio">
+    <input type="text" id="precio" formControlName="precio" [class.invalido]="formulario.get('precio')?.invalid && formulario.get('precio')?.touched">
+  
+    @if (formulario.get('precio')?.errors?.['required'] && formulario.get('precio')?.touched) {
+      <small>El precio es obligatorio.</small>
+    } @else if (formulario.get('precio')?.errors?.['minlength'] && formulario.get('precio')?.touched) {
+      <small>El precio es muy corto.</small>
+    }
   </fieldset>
 
-    <fieldset>
+  <fieldset>
     <label for="combustible">Combustible: </label>
-    <input type="number" id="combustible" formControlName="combustible">
+    <input type="text" id="combustible" formControlName="combustible" [class.invalido]="formulario.get('combustible')?.invalid && formulario.get('combustible')?.touched">
+  
+    @if (formulario.get('combustible')?.errors?.['required'] && formulario.get('combustible')?.touched) {
+      <small>El combustible es obligatorio.</small>
+    } @else if (formulario.get('combustible')?.errors?.['minlength'] && formulario.get('combustible')?.touched) {
+      <small>El combustible es muy corto.</small>
+    }
   </fieldset>
 
-  <button type="submit" [disabled]="formulario.invalid">
+  <button id="enviar" type="submit" [disabled]="formulario.invalid">
     {{ editar ? 'ACTUALIZAR' : 'GUARDAR' }}
   </button>
 
-  <button type="button" (click)="volver()">VOLVER</button>
+  <button id="vovler" type="button" (click)="volver()">VOLVER</button>
 
 </form>

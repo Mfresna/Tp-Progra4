@@ -1,3 +1,4 @@
+/* TITULO */
 #titulo {
   margin: 25px;
   text-align: center;
@@ -11,6 +12,7 @@
   text-transform: uppercase;  /*lo pone siempre en mayuscula*/
 }
 
+/* TARJETAS */
 #tarjetas{
     margin-top: 40px;
     margin-bottom: 60px;
