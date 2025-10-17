@@ -9,10 +9,10 @@ export class ServiceCliente {
   
   readonly API_URL = "http://localhost:3000/clientes"
 
-  productos : Cliente[]
+  clientes : Cliente[]
 
   constructor(private http: HttpClient){
-    this.productos = []
+    this.clientes = []
   }
 
   getClientes(){

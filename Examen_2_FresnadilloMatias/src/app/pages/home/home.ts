@@ -20,7 +20,7 @@ export class Home  implements OnInit {
 
   get() {
     this.service.getClientes().subscribe({
-      next: (data) => { this.service.productos = data; },
+      next: (data) => { this.service.clientes = data; },
       error: (e) => { console.log(e); }
     });
   }

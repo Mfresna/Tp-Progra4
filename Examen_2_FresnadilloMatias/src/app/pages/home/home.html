@@ -4,7 +4,7 @@
 
 <section id="tarjetas">
     <ul>
-        @for (cliente of service.productos; track $index) {
+        @for (cliente of service.clientes; track $index) {
             <li [routerLink]="cliente.id">
                 <p><strong>{{ cliente.nombre }}</strong></p>
                 <p>{{ cliente.empresa }}</p>

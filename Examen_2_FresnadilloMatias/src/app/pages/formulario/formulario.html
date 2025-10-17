@@ -1,5 +1,7 @@
 <form [formGroup]="formulario" (submit)="enviarFormulario()">
 
+
+  <!-- NOMBRE -->
   <fieldset>
     <label for="nombre">Nombre: </label>
     <input type="text" id="nombre" formControlName="nombre" [class.invalido]="formulario.get('nombre')?.invalid && formulario.get('nombre')?.touched">
@@ -11,6 +13,7 @@
     }
   </fieldset>
 
+  <!-- EMPRESA -->
   <fieldset>
     <label for="empresa">Empresa: </label>
     <input type="text" id="empresa" formControlName="empresa" [class.invalido]="formulario.get('empresa')?.invalid && formulario.get('empresa')?.touched">
@@ -20,6 +23,7 @@
     }
   </fieldset>
 
+  <!-- EMAIL -->
   <fieldset>
     <label for="email">Email: </label>
     <input type="email" id="email" formControlName="email" [class.invalido]="formulario.get('email')?.invalid && formulario.get('email')?.touched">
@@ -33,6 +37,7 @@
     }
   </fieldset>
 
+  <!-- TELEFONO -->
   <fieldset>
     <label for="telefono">Telefono: </label>
     <input type="text" id="telefono" formControlName="telefono" [class.invalido]="formulario.get('telefono')?.invalid && formulario.get('telefono')?.touched">
@@ -46,6 +51,7 @@
     }
   </fieldset>
 
+  <!-- COMENTARIOS -->
   <fieldset>
     <label for="comentarios">Comentarios: </label>
     <input type="text-area" id="comentarios" formControlName="comentarios" [class.invalido]="formulario.get('comentarios')?.invalid && formulario.get('comentarios')?.touched">
@@ -55,10 +61,8 @@
     }
   </fieldset>
 
-  <button id="enviar" type="submit" [disabled]="formulario.invalid">
-    {{ editar ? 'ACTUALIZAR' : 'GUARDAR' }}
-  </button>
-
+  <!-- BOTONES -->
+  <button id="enviar" type="submit" [disabled]="formulario.invalid"> {{ editar ? 'ACTUALIZAR' : 'GUARDAR' }}</button>
   <button id="volver" type="button" (click)="volver()">VOLVER</button>
 
 </form>
