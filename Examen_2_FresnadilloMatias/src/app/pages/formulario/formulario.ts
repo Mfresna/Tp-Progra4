@@ -30,7 +30,7 @@ export class Formulario implements OnInit {
     this.formulario = this.fb.group({
       nombre: ['', [Validators.required, Validators.minLength(3)]],
       empresa: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.maxLength(300), Validators.email]],
+      email: ['', [Validators.required, Validators.maxLength(30), Validators.email]],
       telefono: ['', [Validators.required, Validators.minLength(8), Validators.pattern('^[0-9]+$')]],
       comentarios: ['', [Validators.maxLength(200)]],
 

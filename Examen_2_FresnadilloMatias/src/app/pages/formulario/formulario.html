@@ -31,7 +31,7 @@
     @if (formulario.get('email')?.errors?.['required'] && formulario.get('email')?.touched) {
       <small>El email es obligatorio.</small>
     } @else if (formulario.get('email')?.errors?.['maxlength'] && formulario.get('email')?.touched) {
-      <small>El email es muy largo (max 300).</small>
+      <small>El email es muy largo (max 30).</small>
     } @else if (formulario.get('email')?.errors?.['email'] && formulario.get('email')?.touched) {
       <small>El email debe contener '@'</small>
     }
