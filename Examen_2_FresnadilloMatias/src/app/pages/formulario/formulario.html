@@ -1,1 +1,64 @@
-<p>formulario works!</p>
+<form [formGroup]="formulario" (submit)="enviarFormulario()">
+
+  <fieldset>
+    <label for="nombre">Nombre: </label>
+    <input type="text" id="nombre" formControlName="nombre" [class.invalido]="formulario.get('nombre')?.invalid && formulario.get('nombre')?.touched">
+  
+    @if (formulario.get('nombre')?.errors?.['required'] && formulario.get('nombre')?.touched) {
+      <small>El nombre es Obligatorio.</small>
+    } @else if (formulario.get('nombre')?.errors?.['minlength'] && formulario.get('nombre')?.touched) {
+      <small>El nombre es muy corto.</small>
+    }
+  </fieldset>
+
+  <fieldset>
+    <label for="empresa">Empresa: </label>
+    <input type="text" id="empresa" formControlName="empresa" [class.invalido]="formulario.get('empresa')?.invalid && formulario.get('empresa')?.touched">
+  
+    @if (formulario.get('empresa')?.errors?.['required'] && formulario.get('empresa')?.touched) {
+      <small>La empresa es Obligatorio.</small>
+    }
+  </fieldset>
+
+  <fieldset>
+    <label for="email">Email: </label>
+    <input type="email" id="email" formControlName="email" [class.invalido]="formulario.get('email')?.invalid && formulario.get('email')?.touched">
+  
+    @if (formulario.get('email')?.errors?.['required'] && formulario.get('email')?.touched) {
+      <small>El email es obligatorio.</small>
+    } @else if (formulario.get('email')?.errors?.['maxlength'] && formulario.get('email')?.touched) {
+      <small>El email es muy largo (max 300).</small>
+    } @else if (formulario.get('email')?.errors?.['email'] && formulario.get('email')?.touched) {
+      <small>El email debe contener '@'</small>
+    }
+  </fieldset>
+
+  <fieldset>
+    <label for="telefono">Telefono: </label>
+    <input type="text" id="telefono" formControlName="telefono" [class.invalido]="formulario.get('telefono')?.invalid && formulario.get('telefono')?.touched">
+  
+    @if (formulario.get('telefono')?.errors?.['required'] && formulario.get('telefono')?.touched) {
+      <small>El telefono es obligatorio.</small>
+    } @else if (formulario.get('telefono')?.errors?.['pattern'] && formulario.get('telefono')?.touched) {
+      <small>El telefono no posee formato valido.</small>
+    } @else if (formulario.get('telefono')?.errors?.['minlength'] && formulario.get('telefono')?.touched) {
+      <small>El telefono debe tener minimo 8 caracteres</small>
+    }
+  </fieldset>
+
+  <fieldset>
+    <label for="comentarios">Comentarios: </label>
+    <input type="text-area" id="comentarios" formControlName="comentarios" [class.invalido]="formulario.get('comentarios')?.invalid && formulario.get('comentarios')?.touched">
+  
+    @if (formulario.get('comentarios')?.errors?.['maxlength'] && formulario.get('comentarios')?.touched) {
+      <small>El Comentario es demasiado largo (max 200).</small>
+    }
+  </fieldset>
+
+  <button id="enviar" type="submit" [disabled]="formulario.invalid">
+    {{ editar ? 'ACTUALIZAR' : 'GUARDAR' }}
+  </button>
+
+  <button id="volver" type="button" (click)="volver()">VOLVER</button>
+
+</form>
