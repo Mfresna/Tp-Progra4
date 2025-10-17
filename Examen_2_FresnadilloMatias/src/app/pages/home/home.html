@@ -1,0 +1,14 @@
+<section id="titulo">
+    <h1>CLIENTES</h1>
+</section>
+
+<section id="tarjetas">
+    <ul>
+        @for (cliente of service.productos; track $index) {
+            <li [routerLink]="cliente.id">
+                <p><strong>{{ cliente.nombre }}</strong></p>
+                <p>{{ cliente.empresa }}</p>
+            </li>
+        }
+    </ul>
+</section>

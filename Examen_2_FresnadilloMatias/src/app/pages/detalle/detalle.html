@@ -1,0 +1,24 @@
+@if(cliente) {
+  <article>
+
+    <header>
+      <h2>{{ cliente.nombre }}</h2>
+    </header>
+
+    <section id="detalles">
+      <p><strong>ID:</strong> {{ cliente.id }}</p>
+      <p><strong>Nombre:</strong> {{ cliente.nombre }}</p>
+      <p><strong>Empresa:</strong> {{ cliente.empresa }}</p>
+      <p><strong>Email:</strong> {{ cliente.email }}</p>
+      <p><strong>Telefono:</strong> {{ cliente.telefono }}</p>
+      <p><strong>Comentario:</strong> {{ cliente.comentarios }}</p>
+
+    </section>
+
+    <section id="botonera">
+      <button type="button" id="editar" (click)="editar(cliente)">EDITAR</button>
+      <button type="button" id="eliminar" (click)="delete(cliente.id)">Eliminar</button>
+    </section>
+
+  </article>
+}
