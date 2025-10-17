@@ -11,12 +11,12 @@
       <p><strong>Empresa:</strong> {{ cliente.empresa }}</p>
       <p><strong>Email:</strong> {{ cliente.email }}</p>
       <p><strong>Telefono:</strong> {{ cliente.telefono }}</p>
-      <p><strong>Comentario:</strong> {{ cliente.comentarios }}</p>
+      <p><strong>Comentario:</strong> {{ cliente.comentarios}}</p>
 
     </section>
 
     <section id="botonera">
-      <button type="button" id="editar" (click)="editar(cliente)">EDITAR</button>
+      <button type="button" id="editar" (click)="editar(cliente)">Editar</button>
       <button type="button" id="eliminar" (click)="delete(cliente.id)">Eliminar</button>
     </section>
 
