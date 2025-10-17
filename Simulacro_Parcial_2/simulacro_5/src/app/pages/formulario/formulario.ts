@@ -28,8 +28,9 @@ export class Formulario implements OnInit {
     this.id = this.route.snapshot.params['id'];
 
     this.formulario = this.fb.group({
-      nombre: ['', [Validators.required, Validators.minLength(3)]],
-      precio: ['', [Validators.required, Validators.min(0)]]
+      marca: ['', [Validators.required, Validators.minLength(3)]],
+      modelo: ['', [Validators.required, Validators.minLength(3)]],
+      cilindrada: ['', [Validators.required, Validators.min(0)]]
     });
 
     // Verifica si hay ID para editar
