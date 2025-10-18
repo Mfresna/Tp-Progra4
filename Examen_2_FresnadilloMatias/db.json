@@ -1,6 +1,14 @@
 {
   "clientes": [
     {
+      "id": "1",
+      "nombre": "Ana Pérez",
+      "empresa": "TechNova",
+      "email": "ana.perez@technova.com",
+      "telefono": "1123456789",
+      "comentarios": "Cliente preferencial, seguimiento trimestral."
+    },
+    {
       "nombre": "Carlos Díaz",
       "empresa": "Innova SA",
       "email": "carlos.diaz@innova.com",
